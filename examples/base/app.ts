@@ -1,4 +1,4 @@
-import axios from '../../src/index'
+import axios from '../../src/axios'
 
 // get请求
 // axios({
