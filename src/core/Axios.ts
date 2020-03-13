@@ -1,10 +1,13 @@
 import { AxiosRequestConfig, AxiosPromise, Method } from '../types'
+import defaults from '../defaults'
 import dispatchRequest from './dispatchRequest'
 
 export default class Axios {
-  //   request(config: AxiosRequestConfig): AxiosPromise {
-  //     return dispatchRequest(config)
-  //   }
+  defaults: AxiosRequestConfig
+
+  constructor(initConfig: AxiosRequestConfig) {
+    this.defaults = initConfig
+  }
 
   request(url: any, config?: any): AxiosPromise {
     if (typeof url === 'string') {
